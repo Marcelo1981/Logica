@@ -51,12 +51,9 @@ function calcular(){
 	}
 }
 
-function validar(){
-	
-	
-
-	//verificar operador e dividir e o valor é 0
+function validar(){	
 	//verificar se o primeiro operacao digitado
+
 }
 
 
@@ -72,28 +69,36 @@ function verificarValorA(){
 function verificarValorB(){
 	//verificar se os valores sao numeros
 	if (!!isNaN(valorB)) {
-		valorB = Number(prompt("digite um numero B"));
+		valorB = Number(prompt("digite um numero B"));	
 		verificarValorB();
-	}
+	}else if ((operacao == "/") && (valorB == 0)) {			
+		valorB = Number(prompt("voce nao pode dividir por 0, digite um numero B"));					
+		verificarValorB();
+	}	
 }
 
-//leia valorA
-//valorA = Number(prompt("digite o primeiro numero"));
-verificarValorA();
 
-//escolha operação
-operacao = prompt("voce deseja (+)(-)(/)(*)");
+do{
+	//leia valorA
+	//valorA = Number(prompt("digite o primeiro numero"));
+	verificarValorA();
+
+	//escolha operação
+	operacao = prompt("voce deseja (+)(-)(/)(*)");
 
 
-//leia valorB
-//valorB = Number(prompt("digite o segundo numero"));
-verificarValorB();
+	//leia valorB
+	//valorB = Number(prompt("digite o segundo numero"));
+	verificarValorB();
 
-//executar funçao do resultado
+	//executar funçao do resultado
 
-calcular();
+	calcular();
 
-alert(resultado);
+	alert(resultado);
+
+}while(!!confirm("deseja continuar"));
+
 
 	//soma=valorA mais valorB
 		//recebe ValorA
