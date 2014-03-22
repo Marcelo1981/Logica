@@ -97,6 +97,9 @@ do{
 
 	alert(resultado);
 
+	valorA = resultado;
+	valorB = "clear";
+
 }while(!!confirm("deseja continuar"));
 
 
