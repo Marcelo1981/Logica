@@ -4,9 +4,66 @@
 //funçao desse js calculadora
 //
 
+var valorA;
+var valorB;
+var operacao;
+var resultado;
+
+//criar algoritmo operacoes
+
+function soma(){
+	resultado = valorA + valorB;
+}
+
+function subtracao(){
+	resultado = valorA - valorB;
+}
+
+function multiplicacao(){
+	resultado = valorA * valorB;
+}
+
+function divisao(){
+	resultado = valorA / valorB;
+}
+
+function calcular(){	
+	switch(operacao){
+		case "+":
+			soma();
+			break;
+
+		case "-":
+			subtracao();
+			break;
+
+		case "*":
+			multiplicacao();
+			break;
+
+		case "/":
+			divisao();
+			break;
+
+		default:
+			alert("operação errada");
+			break
+	}
+}
+
 //leia valorA
+valorA = Number(prompt("digite o primeiro numero"));
 
 //escolha operação
+operacao = prompt("voce deseja (+)(-)(/)(*)");
+
+//leia valorB
+valorB = Number(prompt("digite o segundo numero"));
+
+//executar funçao do resultado
+calcular();
+
+alert(resultado);
 
 	//soma=valorA mais valorB
 		//recebe ValorA
@@ -35,11 +92,10 @@
 
 //leia valorB
 
-//mostrar resultado
+//executar funçao do resultado
 
-	//pegue valorA, mais operação, mais valorB
+//pegue valorA, mais operação, mais valorB
 
 
 //mostre resultado
 
-alert( -5 + 4);
